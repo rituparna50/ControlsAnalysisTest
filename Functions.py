@@ -23,3 +23,21 @@ def spring_mass_damper(state, t):
     dvdt = (1.0/m) * (-k * x - c * v)
 
     return [dxdt, dvdt]
+
+
+def pid_cntrl(curr_err, prev_err, err_integral, Kp, Ki, Kd, dt):
+## To compute the PID control signal based on the current error and controller parameters
+# Arguments in pid_cntrl function
+
+# curr_err -- Current error (difference between setpoint and actual value)
+# prev_err -- Previous error before time step
+# err_integral -- Total cumulative error
+# Kp - Proportional gain
+# Ki - Integral Gain
+# Kd - Derivative Gain
+# dt - Duration of a time step
+
+## Returns of the function
+#control -- PID control signal
+#err_integral - Updated cumulative error
+
