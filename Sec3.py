@@ -1,3 +1,4 @@
 #Simulation of spring-mass-damper system
+state = odeint(spring_mass_damper, state0, t)
 
-## Part 1 - Create a simulation og a spring-mass-damper system implemented in Python. The result of the simulation outputs time, position, velocity as lists or a Pandas DataFrame stored in a csv. Use any ODE solver you like, you do not have to write one. Describe any parameter you choose and the justification for doing so. (e.g simulation time, timee step, mass, damping coefficient, spring coefficient)
+
