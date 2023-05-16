@@ -62,3 +62,19 @@ C = np.array([[1, 0, 0, 0],
               [0, 1, 0, 0]])
 
 D = np.zeros((2, 2))
+
+# Printing the state space model matrices
+print("A matrix (System dynamics) :")
+print(A)
+print("\n")
+
+print("B matrix (Influence of control vars on state vars:")
+print(B)
+print("\n")
+
+print("C matrix: ")
+print(C)
+print("\n")
+
+print("D matrix:")
+print(D)
