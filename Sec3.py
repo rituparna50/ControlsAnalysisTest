@@ -91,3 +91,31 @@ file_path = directory_path + '\\spring_simulationPID.csv'
 
 #Save the output to the specified file path
 resultsPID.to_csv(file_path, index=False)
+
+#####------------------------------------------------------------------
+
+# To perform open loop stability analysis and demonstrate the step response of the syetm, we can use the control system analysis and simulation libraries from Python.
+# These are the Control System Library (scipy.signal) and Control library (control)
+
+import numpy as np
+from scipy import signal
+
+# Defining the TF of the plant (sping-mass-damper system)
+m = 1.0
+k = 2.0
+c = 0.5
+
+num = [0, 0, 1] #Numerator coefficients of TF
+den = [m, c, k] #Denominator coefficient of TF
+
+plant_tf = signal.TransferFunction(num, den)
+
+#Perform stability analysis
+poles = plant_tf.poles
+print ("Poles:", poles)
+
+#To check for negative real parts in all poles
+if np.all(np.real(poles)<0):
+    print("This plant is stable")
+else:
+    print("This plant is unstable")
