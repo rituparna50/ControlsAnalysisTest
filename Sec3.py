@@ -94,28 +94,30 @@ resultsPID.to_csv(file_path, index=False)
 
 #####------------------------------------------------------------------
 
+#PART 3
 # To perform open loop stability analysis and demonstrate the step response of the syetm, we can use the control system analysis and simulation libraries from Python.
 # These are the Control System Library (scipy.signal) and Control library (control)
 
 import numpy as np
 from scipy import signal
 
-# Defining the TF of the plant (sping-mass-damper system)
-m = 1.0
-k = 2.0
-c = 0.5
+# Define the transfer function of the plant (spring-mass-damper system)
+m = 1.0     # Mass in kg
+k = 2.0     # Spring constant (N/m)
+c = 0.5     # Damping coefficient (Ns/m)
 
-num = [0, 0, 1] #Numerator coefficients of TF
-den = [m, c, k] #Denominator coefficient of TF
+num = [0, 0, 1]      # Numerator coefficients of the transfer function
+den = [m, c, k]      # Denominator coefficients of the transfer function
 
 plant_tf = signal.TransferFunction(num, den)
 
-#Perform stability analysis
+# Perform stability analysis
 poles = plant_tf.poles
-print ("Poles:", poles)
+print("Poles are-", poles)
 
-#To check for negative real parts in all poles
-if np.all(np.real(poles)<0):
-    print("This plant is stable")
+# Check if all poles have negative real parts
+if np.all(np.real(poles) < 0):
+    print("The plant is stable.")
 else:
-    print("This plant is unstable")
+    print("The plant is unstable.")
+
