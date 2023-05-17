@@ -84,12 +84,14 @@ print(D)
 import control
 
 sys = control.StateSpace(A, B, C, D)
-Poles = sys
-Zeroes = sys
+Poles = sys.pole()
+Zeroes = sys.zero()
 
 ## Printing poles and zeroes of system
 print("Poles:")
-print(Poles)
+for pole in Poles:
+    print(pole)
 
 print("\nZeroes:")
-print(Zeroes)
+for zero in Zeroes:
+    print(zero)
