@@ -111,4 +111,13 @@ t, y = control.step_response(sys, T=t, input=u)
 
 # Reshape the y array to have a 1D shape
 y = np.squeeze(y)
+y = y[0]
 
+#Plotting the step response
+
+plt.plot(t, y)
+plt.xlabel('Time')
+plt.ylabel('Roll Rate')
+plt.title('Step Response of Roll Rate')
+plt.grid(True)
+plt.show()
