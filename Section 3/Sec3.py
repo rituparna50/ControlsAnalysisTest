@@ -23,7 +23,7 @@ results = pd.DataFrame({"Time":t, "Position":position, "Velocity":velocity})
 #Create a Pandas dataframe to store the simulation results
 
 #Specify directory path
-directory_path = r'C:\Users\ritup\OneDrive\Documents\GitHub\ControlsAnalysisTest\Data\Sec3'
+directory_path = r'C:\Users\ritup\OneDrive\Documents\GitHub\ControlsAnalysisTest\Section 3\Sec3'
 
 #Create the full path including directory and filename
 file_path = directory_path + '\\spring_simulation.csv'
@@ -84,7 +84,7 @@ resultsPID = pd.DataFrame({"Time":t, 'Position with PID':positionPID, 'Velocity 
 #Create a Pandas dataframe to store the simulation results
 
 #Specify directory path
-directory_path = r'C:\Users\ritup\OneDrive\Documents\GitHub\ControlsAnalysisTest\Data\Sec3'
+directory_path = r'C:\Users\ritup\OneDrive\Documents\GitHub\ControlsAnalysisTest\Section 3\Sec3'
 
 #Create the full path including directory and filename
 file_path = directory_path + '\\spring_simulationPID.csv'
@@ -121,3 +121,4 @@ if np.all(np.real(poles) < 0):
 else:
     print("The plant is unstable.")
 
+##
