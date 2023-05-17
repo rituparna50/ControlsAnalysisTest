@@ -78,3 +78,18 @@ print("\n")
 
 print("D matrix:")
 print(D)
+
+### Pole-zero map of the state-space plant
+
+import control
+
+sys = control.StateSpace(A, B, C, D)
+Poles = sys
+Zeroes = sys
+
+## Printing poles and zeroes of system
+print("Poles:")
+print(Poles)
+
+print("\nZeroes:")
+print(Zeroes)
