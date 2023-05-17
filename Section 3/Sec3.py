@@ -135,3 +135,19 @@ gm, pm, sm, _ = control.margin(plant_tf)
 print(f"Stability of the plant: {'Stable' if gm > 1 else 'Unstable'}")
 print(f"Gain margin: {gm} dB")
 print(f"Phase margin: {pm} degrees")
+
+# Compute the open-loop transfer function of the entire system (Controller --> Plant)
+Kp = 1.0
+Ki = 0.5
+Kd = 0.2
+
+controller_tf = control.TransferFunction([Kd, Kp, Ki], [1, 0])
+
+open_loop_tf = controller_tf * plant_tf
+
+# Perform open-loop stability analysis of the entire system
+gm, pm, sm, _ = control.margin(open_loop_tf)
+
+print(f"Open-loop stability of the entire system: {'Stable' if gm > 1 else 'Unstable'}")
+print(f"Gain margin of the entire system: {gm} dB")
+print(f"Phase margin of the entire system: {pm} degrees")
