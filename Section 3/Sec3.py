@@ -121,4 +121,17 @@ if np.all(np.real(poles) < 0):
 else:
     print("The plant is unstable.")
 
-##
+
+## Step response
+
+import control
+import matplotlib.pyplot as plt
+
+plant_tf = control.TransferFunction(num, den)
+
+# Perform open-loop stability analysis
+gm, pm, sm, _ = control.margin(plant_tf)
+
+print(f"Stability of the plant: {'Stable' if gm > 1 else 'Unstable'}")
+print(f"Gain margin: {gm} dB")
+print(f"Phase margin: {pm} degrees")
