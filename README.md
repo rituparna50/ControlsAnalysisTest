@@ -1,10 +1,5 @@
 # ControlsAnalysisTest
 
-# Section 1
-Describe the following chart 
-
-
-
 # Section 2
 
 ## Part 1 
