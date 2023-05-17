@@ -122,13 +122,13 @@ plt.title('Step Response of Roll Rate')
 plt.grid(True)
 plt.show()
 
-##### To generate hoe much gain and phase pargin this system have?
-
-gm, pm, _, _ = control.margin(sys)
-
-print("Gain Margin:", gm)
-print("Phase Margin:", pm)
-
-# Calculate bandwidth
-bw = control.bandwidth(sys)
-print("Bandwidth:", bw)
+# ##### To generate how much gain and phase pargin this system have?
+#
+# gm, pm, _, _ = control.margin(sys)
+#
+# print("Gain Margin:", gm)
+# print("Phase Margin:", pm)
+#
+# # Calculate bandwidth
+# bw = control.bandwidth(sys)
+# print("Bandwidth:", bw)

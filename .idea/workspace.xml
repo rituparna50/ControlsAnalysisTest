@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75bf73df-b087-4427-b407-0b99b48a9260" name="Changes" comment="">
+    <list default="true" id="9336a261-ca7a-4f37-b946-46b847b12bdb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Section 2/AircraftLongitudinalStability_Part2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,27 +26,26 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Pt0fcqA15ZM3ufEkc5dNyP58qs" />
+  <component name="ProjectId" id="2Pw2MYCciqoLuXlG825f1WwrYBV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ritup/OneDrive/Documents/GitHub/ControlsAnalysisTest&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="75bf73df-b087-4427-b407-0b99b48a9260" name="Changes" comment="" />
-      <created>1684261174752</created>
+      <changelist id="9336a261-ca7a-4f37-b946-46b847b12bdb" name="Changes" comment="" />
+      <created>1684353776779</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684261174752</updated>
+      <updated>1684353776779</updated>
     </task>
     <servers />
   </component>
