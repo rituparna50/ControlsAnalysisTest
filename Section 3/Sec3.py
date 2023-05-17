@@ -151,3 +151,12 @@ gm, pm, sm, _ = control.margin(open_loop_tf)
 print(f"Open-loop stability of the entire system: {'Stable' if gm > 1 else 'Unstable'}")
 print(f"Gain margin of the entire system: {gm} dB")
 print(f"Phase margin of the entire system: {pm} degrees")
+
+# Visualize the step response of the plant
+t, y = control.step_response(plant_tf)
+plt.plot(t, y)
+plt.xlabel('Time')
+plt.ylabel('Output')
+plt.title('Step Response of the Plant')
+plt.grid(True)
+plt.show()
