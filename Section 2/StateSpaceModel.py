@@ -4,6 +4,7 @@
         #Create aircarft state space model
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Given values
 V= 279.1    # Velocity ft/sec
@@ -48,15 +49,15 @@ m = W / 32.174 #Mass (lb to slug)
 # Sideslip angle is beta
 
 # State space model matrices
-A = np.array([[-Cy_beta * Q * S/(m*V), 0, 0, -m*g/(m*V)],
+A = np.array([[-Cy_beta*Q*S/(m*V), 0, 0, -m*g/(m*V)],
               [0, 0, 1, 0],
               [0, 0, 0, 1],
-              [0, (b * (Clp *Q*S*b + Cnp*Q*S*c_bar)) / (Iy*V), 0, (Clr*Q*S*b + Cnr*Q*S*c_bar) / (Iy*V)]])
+              [0, (b * (Clp*Q*S*b + Cnp*Q*S*c_bar)) / (Iy*V), 0, (Clr*Q*S*b + Cnr*Q*S*c_bar) / (Iy*V)]])
 
-B = np.array([[Cy_del_r*Q*S / m, Cl_del_a *Q*S / (Iy*V)],
+B = np.array([[Cy_del_r*Q*S/m, Cl_del_a*Q*S / (Iy*V)],
               [0, 0],
               [0, 0],
-              [Cn_del_r*Q*S*b / (Iy*V), Cn_del_a *Q*S*c_bar / (Iy*V)]])
+              [Cn_del_r*Q*S*b / (Iy*V), Cn_del_a*Q*S*c_bar / (Iy*V)]])
 
 C = np.array([[1, 0, 0, 0],
               [0, 1, 0, 0]])
@@ -95,3 +96,19 @@ for pole in Poles:
 print("\nZeroes:")
 for zero in Zeroes:
     print(zero)
+
+# No zeroes in the system
+
+# To show a step response of roll rate given an input
+
+# Define the time vector for simulation
+t = np.linspace (0,10,1000)
+# Define the input step function
+u = np.ones_like(t)
+
+# Simulate the system step response
+t, y = control.step_response(sys, T=t, input=u)
+
+# Reshape the y array to have a 1D shape
+y = np.squeeze(y)
+
